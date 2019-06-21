@@ -1,0 +1,77 @@
+
+<html> 
+ <head> 
+    
+   <title>Google Maps Multiple Markers</title> 
+   <link href="maker.css" rel="stylesheet" type="text/css">
+   <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script> 
+ </head> 
+ <body> 
+   <div id="map" style="height: 300px; width: 100%;"> 
+ </div> 
+ <script type="text/javascript"> 
+     var locations = [ 
+       ['SVCE', 12.9871,79.9721,5],
+       ['SVCE POND',12.9879,79.9737,4 ], 
+       ['5TH BLOCK',12.9882,79.9739,3 ], 
+       ['CANTEEN',12.9873,79.9725,2 ], 
+       ['TEMPLE', 12.9873,79.9720,1 ] 
+     ];
+
+   
+ 
+ 
+     var map = new google.maps.Map(document.getElementById('map'), { 
+       zoom:20, 
+       center: new google.maps.LatLng(12.9871,79.9721), 
+       mapTypeId: google.maps.MapTypeId.ROADMAP 
+     }); 
+ 
+ 
+     var infowindow = new google.maps.InfoWindow(); 
+ 
+ 
+     var marker, i; 
+ 
+ 
+     for (i = 0; i < locations.length; i++) {  
+       marker = new google.maps.Marker({ 
+         position: new google.maps.LatLng(locations[i][1], locations[i][2]), 
+        map: map 
+       }); 
+ 
+ 
+       google.maps.event.addListener(marker, 'click', (function(marker, i) { 
+         return function() { 
+           infowindow.setContent(locations[i][0]); 
+           infowindow.open(map, marker); 
+         } 
+       })(marker, i)); 
+     } 
+   </script> 
+   <center>
+<br><div class="font"><b><i>ENTER YOUR LOCATION</i><b></div>
+<div class="login"><p>Start:</p>
+	<div class="custom_select">
+	<select name="drop">
+  <option value="canteen">Canteen</option>
+  <option value="svce ">SVCE POND</option>
+  <option value="5th">5th Block </option>
+  <option value="svc">SVCE</option>
+  <option value="tem">Temple</option>
+  
+</select></div>
+<br>	<p>Interested Collections:</p>
+	<input type="checkbox" name="Canteen" value="p1">Canteen <br>
+  <input type="checkbox" name="SVCE POND" value="p2">SVCE POND <br>
+  <input type="checkbox" name="5th Block" value="p3" checked>5th Block <br>
+  <input type="checkbox" name="SVCE" value="p4">SVCE <br>
+  <input type="checkbox" name="temple" value="p5" checked>Temple <br><br>
+				
+   				<a href="map.html">
+				<input type="submit" class="form-con" value="PROCEED" name="login"><br></a>
+				
+
+</center>
+ </body> 
+ </html>

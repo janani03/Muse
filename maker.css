@@ -1,0 +1,54 @@
+.form-con{
+	margin:0 auto;
+	position:absolute;
+	width:300px;
+	height:40px;
+	background-color:black;
+	color:white;
+	left:35%;
+	}
+.form-con:hover{
+	cursor:pointer;
+	background-color:orange;
+}
+body{
+	 background-image:url("tree.jpg");
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.login{
+	font-size:20px;
+	color:black;
+}
+
+.font{
+	font-size:20px;
+	color:yellow;
+}
+.custom_select{
+	font-size:20px;
+	color:black;
+}
+.form-control{
+	margin:0 auto;
+	position:absolute;
+	width:130px;
+	height:24px;
+	background-color:white;
+	color:black;
+	left:45%;
+	}
+.form1-con{
+	margin:0 auto;
+	position:absolute;
+	width:300px;
+	height:40px;
+	background-color:black;
+	color:white;
+	left:35%;
+	}
+.form1-con:hover{
+	cursor:pointer;
+	background-color:orange;
+}

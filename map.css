@@ -1,0 +1,26 @@
+body{
+	background-image:url("sea.jpg");
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+	
+	
+}
+.font{
+	color:orange;
+}
+
+.form-cone{
+	margin:0 auto;
+	position:absolute;
+	width:300px;
+	height:40px;
+	background-color:black;
+	color:white;
+	left:35%;
+	}
+.form-cone:hover{
+	cursor:pointer;
+	background-color:orange;
+}
+		

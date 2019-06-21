@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>login form</title>
+		<link href="p2.css" rel="stylesheet" type="text/css">
+	</head>
+	<body background="back.jpg">; 
+	<img class="first" src="college.png" width="100" height="100" align="middle">
+
+	<center>
+	<h1>Welcome to SVCE!<br>LOGIN HERE</h1>
+		
+	</center>
+		<div class="login">
+			<form class="control" method="post" action="login1.php">
+				
+				<p>EMAIL:</p><input type="email" class="form-control" name="email" placeholder="enter your mail Id" required><br><br><br>
+				<p>PASSWORD:</p><input type="password" class="form-control" name="password" placeholder="enter your password" required><br><br><br>
+   				
+
+				<input type="submit" class="form-cone" value="LOGIN" name="login" placeholder="login"><br>
+			<br><br>	<a href="maker.html">
+				<input type="button" class="form-cone" value="NEXT PAGE" name="login"><br></a>
+				
+
+
+               </form> 
+			   
+			   
+			   <script>
+			   function CheckPassword(inputtxt)
+			   {
+			   var passw=/^(?=.\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+			   if(inputtxt.value.match(passw))
+			   {
+				   alert('correct,try another..')
+				   return false;
+			   }
+			   }
+			   </script>
+			   ?>		
+		</div>	
+		
+	</body>
+
+</html>
